@@ -27,6 +27,11 @@ npm start         # http://localhost:5177
 
 No `npm install` is required — the project has zero runtime dependencies.
 
+> Behind a proxy? Node does not read `HTTPS_PROXY` on its own. Start the server with
+> `NODE_USE_ENV_PROXY=1 HTTPS_PROXY=http://127.0.0.1:7897 node src/server.js` (Node 22+) and the live quote path works.
+
+Live quotes have been verified against the real endpoint: `0.1 ETH → 226.29 USDC, ~20s, ed25519 signature returned by 1Click`.
+
 ### Do X, see Y
 
 | Do this | Expect this |

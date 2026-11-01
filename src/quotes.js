@@ -53,6 +53,10 @@ export async function liveQuote({ from, to, amount, slippageBps = 100, timeoutMs
     amount: assets.toBaseUnits(amount, from.symbol, from.chain).toString(),
     refundTo: ZERO_EVM,
     recipient: ZERO_EVM,
+    // 1Click requires all three route types explicitly; omitting them is a 400.
+    depositType: "ORIGIN_CHAIN",
+    refundType: "ORIGIN_CHAIN",
+    recipientType: "DESTINATION_CHAIN",
     deadline: new Date(Date.now() + 10 * 60 * 1000).toISOString(),
   };
 
@@ -75,7 +79,10 @@ export async function liveQuote({ from, to, amount, slippageBps = 100, timeoutMs
       amountOut: Number(out.toFixed(6)),
       notionalUsd: Number((Number(amount) * assets.priceOf(from.symbol, from.chain)).toFixed(2)),
       route: `${from.symbol} → ${to.symbol}`,
-      timeEstimate: q.quote?.timeEstimate ?? null,
+      timeEstimateSeconds: q.quote?.timeEstimate ?? null,
+      amountOutUsd: Number(q.quote?.amountOutUsd ?? 0) || null,
+      minAmountOut: q.quote?.minAmountOut ?? null,
+      signed: Boolean(q.signature),
       depositAddress: q.quote?.depositAddress ?? null,
       raw: q.quote ?? q,
     };

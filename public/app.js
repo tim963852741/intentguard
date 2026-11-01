@@ -96,9 +96,12 @@ function renderResult(d) {
     box.appendChild(c);
   }
 
-  const note = el("div", "note",
-    `quote source: ${d.quote.source} · route ${d.quote.route} · reference ${d.reference.out} ${d.intent.to.symbol}` +
-    (d.quote.note ? ` · ${d.quote.note}` : ""));
+  const bits = [`quote: ${d.quote.source}`, `route ${d.quote.route}`,
+                `reference ${d.reference.out} ${d.intent.to.symbol}`];
+  if (d.quote.timeEstimateSeconds) bits.push(`~${d.quote.timeEstimateSeconds}s`);
+  if (d.quote.signed) bits.push("signed by 1Click");
+  if (d.quote.note) bits.push(d.quote.note);
+  const note = el("div", "note", bits.join(" · "));
   box.appendChild(note);
 }
 

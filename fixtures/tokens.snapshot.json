@@ -1,0 +1,90 @@
+[
+ {
+  "assetId": "nep141:wrap.near",
+  "symbol": "wNEAR",
+  "blockchain": "near",
+  "decimals": 24,
+  "price": 4.39,
+  "contractAddress": "wrap.near"
+ },
+ {
+  "assetId": "nep141:eth.bridge.near",
+  "symbol": "ETH",
+  "blockchain": "near",
+  "decimals": 18,
+  "price": 2272.81,
+  "contractAddress": "eth.bridge.near"
+ },
+ {
+  "assetId": "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+  "symbol": "USDC",
+  "blockchain": "near",
+  "decimals": 6,
+  "price": 1,
+  "contractAddress": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+ },
+ {
+  "assetId": "nep141:aaaaaa20d9e0e2461697782ef11675f668207961.factory.bridge.near",
+  "symbol": "AURORA",
+  "blockchain": "near",
+  "decimals": 18,
+  "price": 0.04606333,
+  "contractAddress": "aaaaaa20d9e0e2461697782ef11675f668207961.factory.bridge.near"
+ },
+ {
+  "assetId": "nep141:eth-0xdac17f958d2ee523a2206206994597c13d831ec7.omft.near",
+  "symbol": "USDT",
+  "blockchain": "eth",
+  "decimals": 6,
+  "price": 0.999536,
+  "contractAddress": "0xdac17f958d2ee523a2206206994597c13d831ec7"
+ },
+ {
+  "assetId": "nep141:sol.omft.near",
+  "symbol": "SOL",
+  "blockchain": "sol",
+  "decimals": 9,
+  "price": 95.73,
+  "contractAddress": null
+ },
+ {
+  "assetId": "nep141:eth-0x6b175474e89094c44da98b954eedeac495271d0f.omft.near",
+  "symbol": "DAI",
+  "blockchain": "eth",
+  "decimals": 18,
+  "price": 1,
+  "contractAddress": "0x6b175474e89094c44da98b954eedeac495271d0f"
+ },
+ {
+  "assetId": "nep245:v2_1.omni.hot.tg:56_11111111111111111111",
+  "symbol": "BNB",
+  "blockchain": "bsc",
+  "decimals": 18,
+  "price": 712.91,
+  "contractAddress": null
+ },
+ {
+  "assetId": "nep245:v2_1.omni.hot.tg:137_11111111111111111111",
+  "symbol": "POL",
+  "blockchain": "pol",
+  "decimals": 18,
+  "price": 0.092524,
+  "contractAddress": null
+ },
+ {
+  "assetId": "nep141:eth-0x2260fac5e5542a773aa44fbcfedf7c193bc2c599.omft.near",
+  "symbol": "WBTC",
+  "blockchain": "eth",
+  "decimals": 8,
+  "price": 78054,
+  "contractAddress": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"
+ },
+ {
+  "assetId": "nep245:v2_1.omni.hot.tg:56_SZzgw3HSudhZcTwPWUTi2RJB19t",
+  "symbol": "NEAR",
+  "blockchain": "bsc",
+  "decimals": 18,
+  "price": 4.39,
+  "contractAddress": "0x1fa4a73a3f0133f0025378af00236f3abdee5d63"
+ }
+]

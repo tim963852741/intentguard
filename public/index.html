@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IntentGuard — spend limits for AI agents</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="mark">IG</div>
+    <div>
+      <h1>IntentGuard</h1>
+      <p>Every payment an AI agent wants to make is priced, checked against hard limits, then logged — before it touches NEAR Intents.</p>
+    </div>
+  </div>
+  <div class="meta" id="meta">loading registry…</div>
+</header>
+
+<main>
+  <section class="panel">
+    <label for="intent">Payment intent (natural language)</label>
+    <textarea id="intent" rows="3" spellcheck="false">把 0.5 ETH 换成 USDC，滑点 1%</textarea>
+    <div class="chips" id="examples"></div>
+    <div class="controls">
+      <label class="switch"><input type="checkbox" id="live"> <span>use live 1Click quote</span></label>
+      <div class="right">
+        <button id="reset" class="ghost" title="clear the audit log so scenarios are reproducible">reset log</button>
+        <button id="go">Evaluate</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel result" id="result" hidden></section>
+
+  <section class="panel">
+    <div class="row-between">
+      <h2>Audit trail</h2>
+      <div class="badge" id="chain">chain: —</div>
+    </div>
+    <table id="audit">
+      <thead><tr><th>#</th><th>time</th><th>intent</th><th>notional</th><th>decision</th><th>reason</th><th>hash</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+</main>
+
+<footer>
+  <span>Track: AI Security &amp; Defense · NEAR HACKATHON 2026</span>
+  <span>Policy engine is deterministic and unit-tested. Quotes come from 1Click (dry run) or the bundled snapshot.</span>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>

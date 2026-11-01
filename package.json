@@ -1,0 +1,23 @@
+{
+  "name": "intentguard",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "Policy-gated payment rail for AI agents. Every spend intent is checked against hard limits before it reaches NEAR Intents.",
+  "scripts": {
+    "start": "node src/server.js",
+    "demo": "node demo/run-demo.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "near",
+    "near-intents",
+    "ai-agents",
+    "policy-engine",
+    "security"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
